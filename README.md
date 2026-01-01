@@ -1,11 +1,19 @@
-<div align="center">
 
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
+# Azel_ai | Déploiement
 
-  <h1>Built with AI Studio</h2>
+## Installation locale
+1. `npm install`
+2. `npm run dev`
 
-  <p>The fastest path from prompt to production with Gemini.</p>
+## Déploiement Vercel
+1. Poussez ce code sur GitHub.
+2. Allez sur [Vercel](https://vercel.com).
+3. Importez le repo.
+4. Ajoutez la variable d'environnement `API_KEY` (votre clé Gemini).
+5. Cliquez sur **Deploy**.
 
-  <a href="https://aistudio.google.com/apps">Start building</a>
-
-</div>
+## Structure
+- `index.html` : Point d'entrée.
+- `App.tsx` : Composant racine.
+- `services/` : Logique API et Stockage.
+- `components/` : Éléments UI.

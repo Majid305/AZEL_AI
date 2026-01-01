@@ -1,0 +1,8 @@
+{
+  "name": "Azel_ai",
+  "description": "An intelligent note-taking PWA with a contemporary Moroccan touch, powered by Gemini Flash.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
+}

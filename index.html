@@ -1,0 +1,108 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="theme-color" content="#C5636C">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>Azel_ai | Intelligence Intuitive</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #C5636C;
+            font-family: 'Manrope', sans-serif;
+        }
+
+        #root {
+            height: 100vh;
+            width: 100vw;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .luminous-glow {
+            filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.7));
+            animation: pulse-glow 4s infinite ease-in-out;
+        }
+
+        @keyframes pulse-glow {
+            0%, 100% { filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.4)); transform: scale(1) rotate(0deg); }
+            50% { filter: drop-shadow(0 0 25px rgba(255, 255, 255, 0.9)); transform: scale(1.08) rotate(5deg); }
+        }
+
+        .premium-card {
+            background: rgba(255, 255, 255, 0.12);
+            backdrop-filter: blur(24px);
+            -webkit-backdrop-filter: blur(24px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Mode "Petite Fenêtre" optimisé sur Desktop */
+        @media (min-width: 768px) {
+            body {
+                background: radial-gradient(circle at center, #D67A83 0%, #A44D55 100%);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100vh;
+            }
+            #root {
+                max-width: 500px; /* Plus large pour éviter l'effet compacté */
+                height: 90vh;
+                max-height: 900px;
+                margin: auto;
+                border-radius: 48px;
+                box-shadow: 0 50px 120px rgba(0,0,0,0.4);
+                position: relative;
+                border: 8px solid rgba(255, 255, 255, 0.1);
+                background-color: #C5636C;
+            }
+        }
+
+        .nav-fixed-bottom {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: 100;
+            padding: 24px;
+            padding-bottom: calc(24px + env(safe-area-inset-bottom));
+            pointer-events: none;
+        }
+
+        /* Scrollbar invisible */
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3",
+    "@google/genai": "https://esm.sh/@google/genai@^1.34.0",
+    "vite": "https://esm.sh/vite@^7.3.0",
+    "@vitejs/plugin-react": "https://esm.sh/@vitejs/plugin-react@^5.1.2"
+  }
+}
+</script>
+</head>
+<body>
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+</body>
+</html>
