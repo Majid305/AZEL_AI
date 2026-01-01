@@ -1,11 +1,10 @@
 
 import { GoogleGenAI, Type } from "@google/genai";
 
-// Always use new GoogleGenAI({ apiKey: process.env.API_KEY });
-const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
-
 export const geminiService = {
   analyzeNote: async (content: string, isAudio: boolean = false) => {
+    // Initialisation dynamique pour garantir l'accès à process.env.API_KEY au moment de l'appel
+    const ai = new GoogleGenAI({ apiKey: (process.env as any).API_KEY });
     const model = 'gemini-3-flash-preview';
     const now = new Date();
     
